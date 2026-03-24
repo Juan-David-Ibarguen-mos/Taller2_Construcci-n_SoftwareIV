@@ -1,0 +1,62 @@
+﻿/* ── Foto de perfil circular ── */
+#foto {
+    width: 200px;
+    margin: 2rem 0;
+    border-radius: 50%;
+}
+/* ── Bloque de bienvenida (sobre fondo azul) ── */
+.seccion-bienvenida {
+    margin: 5rem 0 10rem 0;
+    color: black;
+    background-color: #FF9EEC;
+    padding: 3rem;
+   
+   
+}
+
+    .seccion-bienvenida h1 {
+        margin-bottom: 1rem;
+    }
+
+    .seccion-bienvenida p {
+        font-family: sans-serif;
+        line-height: 1.5;
+        font-size: 1.25rem;
+    }
+/* ── Imagen decorativa del logo .NET ── */
+#imagen-dotnet {
+    width: 500px;
+}
+/* ── Textos en negrita dentro de las tarjetas de habilidades ── */
+.cabecera {
+    font-weight: bold;
+}
+/* ── Íconos de Bootstrap Icons en las tarjetas ── */
+.habilidades ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.habilidades i {
+    color: #FF9EEC;
+    font-size: 50px;
+}
+.btn-primary {
+    background-color: #FF9EEC; /* Pon aquí tu color rosa*/
+    border-color: #FF9EEC;  /* El borde debe ser del mismo color */
+    color: black; /* El color del texto */
+}
+.contacto-section {
+    background-color: #f8f9fa;
+    padding: 4rem 0;
+}
+.destacado {
+    border: 2px solid gold; /* Borde dorado */
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); /* Sombra dorada suave */
+    transition: transform 0.2s, box-shadow 0.2s; /* Suaviza animación al pasar el mouse */
+}
+
+.destacado:hover {
+    transform: translateY(-5px); /* Levanta la tarjeta al pasar el mouse */
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.6); /* Sombra más intensa */
+}

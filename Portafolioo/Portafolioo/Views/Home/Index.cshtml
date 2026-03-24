@@ -1,0 +1,19 @@
+﻿@model Portafolioo.Models.HomeIndexViewModel
+@{
+    ViewData["Title"] = "Página principal";
+}
+
+@* ── Sección: foto, nombre y bloque de bienvenida ── *@
+<partial name="_Presentacion" />
+
+@* ── Sección: tarjetas de habilidades ── *@
+<partial name="_Habilidades" />
+
+@* ── Sección: experiencia laboral *@
+<partial name="_ExperienciaLaboral" model="Model.Experiencias" />
+
+@* ── Sección: proyectos recientes *@
+<partial name="_SeccionProyectos" model="Model.Proyectos" />
+
+@* ── Sección: contacto *@
+<partial name="_Contacto" />

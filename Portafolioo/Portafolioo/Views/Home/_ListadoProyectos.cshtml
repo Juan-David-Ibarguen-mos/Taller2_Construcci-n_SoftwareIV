@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Portafolioo.Models.Proyecto>
+
+@if (Model is not null)
+{
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var proyecto in Model)
+            {
+                <div class="col">
+                    <div class="card h-100 @(proyecto.EsDestacado ? "destacado" : "")">
+                        <img src="@proyecto.ImagenURL"
+                             class="card-img-top" alt="imagen proyecto" />
+                        <div class="card-body">
+                            <h5 class="card-title">@proyecto.Titulo</h5>
+                            <p class="card-text">@proyecto.Descripcion</p>
+
+                            <p class="mb-1"><strong>Tecnologías:</strong> @proyecto.Tecnologias</p>
+                            <p class="mb-1"><strong>Año:</strong> @proyecto.AnoDesarrollo</p>
+
+                            @* Badge de Estado *@
+                            @{
+                                string badgeClass = proyecto.Estado switch
+                                {
+                                    "Completado" => "bg-success",
+                                    "En desarrollo" => "bg-warning text-dark",
+                                    _ => "bg-secondary"
+                                };
+                            }
+                            <span class="badge @badgeClass">@proyecto.Estado</span>
+
+                            @* Badge Destacado *@
+                            @if (proyecto.EsDestacado)
+                            {
+                                <span class="badge bg-warning text-dark">Destacado</span>
+                            }
+                        </div>
+                        <div class="card-footer">
+                            <a asp-action="Detail" asp-route-id="@proyecto.Id" class="btn btn-primary">
+                                Ver Detalle
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
